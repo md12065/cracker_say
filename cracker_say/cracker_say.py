@@ -19,6 +19,7 @@ import sys,os,time
 import os
 import time
 import sys
+import requests
 
 #text colour()
 #creator: CRACKER911181
@@ -54,8 +55,7 @@ except requests.exceptions.InvalidURL:
 	sys.exit()
 
 print(pest+"\n\n")
-suba=open("a_link.txt","r")
-subad=suba.read()
+subad=requests.get("https://raw.githubusercontent.com/cracker911181/Cracker-Tool/main/.test/a_link.txt").text
 ascii_de=subad.encode("ascii") 
 decode=base64.b64decode(ascii_de) 
 subadmin=decode.decode("ascii")
